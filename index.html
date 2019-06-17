@@ -6,7 +6,6 @@
 </head>
 <body>
 	<!-- Load Facebook SDK for JavaScript -->
-	<div id="fb-root"></div>
 	<script>
 		window.fbAsyncInit = function() {
 			FB.init({
@@ -22,6 +21,11 @@
 			js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
 			fjs.parentNode.insertBefore(js, fjs);
 		}(document, 'script', 'facebook-jssdk'));
+		function handleMessage(sender_psid, received_message) {
+			if (received_message) {
+				console.log(received_message.text);
+			} 
+		}
 	</script>
 
 		<!-- Your customer chat code -->
