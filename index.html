@@ -9,17 +9,27 @@
 	<script>
 		window.fbAsyncInit = function() {
 			FB.init({
-				// autoLogAppEvents : true,
 				xfbml            : true,
 				version          : 'v3.3'
 			});
 		};
+
+		(function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s); js.id = id;
+			js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
 	</script>
-	<!-- load language -->
-	<script async defer src="https://connect.facebook.net/en_US/sdk.js"></script>
-	<!-- embed code for bot -->
+
+	<!-- Your customer chat code -->
+	<div class="fb-customerchat"
+		attribution=setup_tool
+		page_id="808661622853726">
 	<a href='https://www.messenger.com/t/2093633137352892'><img src='https://facebook.botframework.com/Content/MessageUs.png'></a>
-	
+	</div>
+
 
 </body>
 </html>
