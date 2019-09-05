@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>FB Live Chat</title>
-	
+
 </head>
+
 <body>
 	<!-- Load Facebook SDK for JavaScript -->
 	<div id="fb-root"></div>
+	<div>
+		<iframe src='https://webchat.botframework.com/embed/TTS-bot?s=UOzjmh9t86s.f3DMbgb8Fn40vLY1HbRw4vycE40rLIkudjpXfbq8VAk'
+			style='min-width: 400px; width: 100%; min-height: 500px;'></iframe>
+	</div>
 	<script>
-		window.fbAsyncInit = function() {
+		window.fbAsyncInit = function () {
 			FB.init({
-				xfbml            : true,
-				version          : 'v3.3'
+				xfbml: true,
+				version: 'v3.3'
 			});
 		};
 
-		(function(d, s, id) {
+		(function (d, s, id) {
 			var js, fjs = d.getElementsByTagName(s)[0];
 			if (d.getElementById(id)) return;
 			js = d.createElement(s); js.id = id;
@@ -24,11 +30,9 @@
 		}(document, 'script', 'facebook-jssdk'));
 	</script>
 
-		<!-- Your customer chat code -->
-		<div class="fb-customerchat"
-		attribution=setup_tool
-		page_id="808661622853726"
-		theme_color="#0084ff">
+	<!-- Your customer chat code -->
+	<div class="fb-customerchat" attribution=setup_tool page_id="808661622853726" theme_color="#0084ff">
 	</div>
 </body>
+
 </html>
